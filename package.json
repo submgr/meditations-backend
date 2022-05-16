@@ -10,6 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "@fastify/auth": "^2.0.0",
+    "@fastify/static": "^5.0.2",
+    "audioconcat": "^0.1.4",
     "dotenv": "^16.0.0",
     "fastify": "^3.27.4",
     "fastify-auth": "^1.1.0",
