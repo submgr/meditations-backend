@@ -3,7 +3,7 @@ async function get(fastify, options){
         //{preHandler: fastify.auth([
         //    fastify.userAuth
         //])},
-      async function(request, reply) {
+      async function(request, reply) { 
 
             var audioconcat = require('audioconcat')
             const path = require('path')
