@@ -46,10 +46,7 @@ fastify.register(autoload, {
   })
 
 const server_port = process.env.PORT || process.env.port || 3000;
-const server_ip = process.env.server_ip || '0.0.0.0';
-fastify.listen(server_port, server_ip, function (err, address) {
-  if (err) {
-    fastify.log.error(err)
-    process.exit(1)
-  }
+fastify.listen(server_port, '0.0.0.0', (err, address) => {
+  if (err) throw err
+  fastify.log.info(`server listening on ${address}`)
 })
