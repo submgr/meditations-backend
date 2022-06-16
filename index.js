@@ -45,8 +45,9 @@ fastify.register(autoload, {
 
   })
 
-const port_to_listen = process.env.PORT || 3000 || process.env.port_to_listen;
-fastify.listen(port_to_listen, process.env.server_ip, function (err, address) {
+const server_port = process.env.port || 8080;
+const server_ip = process.env.server_ip || '0.0.0.0';
+fastify.listen(server_port, server_ip, function (err, address) {
   if (err) {
     fastify.log.error(err)
     process.exit(1)
