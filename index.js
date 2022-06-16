@@ -1,7 +1,7 @@
 require('dotenv').config()
 
 const fastify = require('fastify')({
-  logger: process.env.loggerToggler
+  logger: true
 })
 
 const autoload = require('fastify-autoload')
